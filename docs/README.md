@@ -9,7 +9,7 @@ title:
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# Enhancing Video Game Experience With Brain Computer Interface
 
 #### Team
 
@@ -37,7 +37,7 @@ title:
 
 DELETE THIS SAMPLE before publishing to GitHub Pages !!!
 This is a sample image, to show how to add images to your page. To learn more options, please refer [this](https://projects.ce.pdn.ac.lk/docs/faq/how-to-add-an-image/)
-![Sample Image](./images/sample.png)
+
 
 
 ## Abstract
@@ -56,9 +56,22 @@ and down) will be performed in a video game using BCI. In this approach, inner s
 as the method to control the video game application. The inner speech (Nieto et al., 2021), also referred to as
 verbal thinking, is a form of self-directed speech produced in mind
 
+One of the main steps in this project is to acquire brain signals related to inner speech. The data acquisition
+technique to be used is electroencephalography (EEG) which is a non-invasive data acquisition technique. It is
+aimed to achieve a higher level of performance by capturing the most relevant signals with the use of eight
+electrodes.
 
+The signal enhancement and feature extraction will be done using signal processing techniques like signal
+filtering, independent component analysis (ICA), principal component analysis (PCA), wavelet transform, and
+fast Fourier transform (FFT). Then, signals will be classified into five categories using the artificial neural
+network technique as up, down, left, right, and none (Chai et al., 2012; Simistira Liwicki et al., 2022). These
+classified commands are fed into the real-time application (Figure 01).
+
+![Experiment steps](./images/steps.png)
 
 ## Experiment Setup and Implementation
+
+
 
 ## Results and Analysis
 
