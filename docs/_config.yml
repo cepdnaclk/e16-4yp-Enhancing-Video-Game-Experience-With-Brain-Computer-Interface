@@ -2,8 +2,8 @@
 # Please refer above link to know the available configurations
 
 title: ""
-remote_theme: cepdnaclk/eYY-project-theme
-description: ""
+remote_theme: cepdnaclk/e16-4yp-Enhancing Video Game Experience With Brain Computer Interface
+description: "Developing a video game interface that uses the brain-computer interface (BCI) based on electroencephalography (EEG)."
 markdown: kramdown
 
 kramdown:
