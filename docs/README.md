@@ -3,7 +3,7 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-4yp-project-template
+repository-name: e16-4yp-Enhancing Video Game Experience With Brain Computer Interface
 title:
 ---
 
@@ -13,14 +13,14 @@ title:
 
 #### Team
 
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
+- E/16/012,  Isurika Adikari, [email](e16012@eng.pdn.ac.lk)
+- E/16/081, J.M.Praveen Dhananjaya, [email](e16081@eng.pdn.ac.lk)
+- E/16/200, Sumudu Liyanage, [email](e16200@eng.pdn.ac.lk)
 
 #### Supervisors
 
-- Name, [email](mailto:name@eng.pdn.ac.lk)
-- Name, [email](mailto:name@eng.pdn.ac.lk)
+- Dr. Isuru Nawinne, [email](isurunawinne@eng.pdn.ac.lk)
+- Prof. Roshan G. Ragel, [email](roshanr@eng.pdn.ac.lk)
 
 #### Table of content
 
@@ -42,9 +42,21 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ## Abstract
 
+Developing a video game interface that uses the brain-computer interface (BCI) based on electroencephalography (EEG).
+
 ## Related works
 
+
+
 ## Methodology
+
+Brain-Computer Interface (BCI) is a collaboration between a brain and a device that enables signals from the
+brain to direct some external activity (Khong et al., 2014). In this project, four control actions (left, right, up,
+and down) will be performed in a video game using BCI. In this approach, inner speech commands will be used
+as the method to control the video game application. The inner speech (Nieto et al., 2021), also referred to as
+verbal thinking, is a form of self-directed speech produced in mind
+
+
 
 ## Experiment Setup and Implementation
 
