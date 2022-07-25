@@ -9,7 +9,7 @@ Non-invasive EEG-based Brain Computer Interface (BCI) devices have been a fascin
 
 In this project, a simple navigation video game application will be developed. There will be five control instructions used: Left, Right, Up, Down, and None. In this approach, inner speech commands will be used as the method to control the video game application. The inner speech , also referred to as verbal thinking, is a form of self-directed speech produced in mind. One of the main steps in this project is to acquire brain signals related to inner speech. The data acquisition technique to be used is electroencephalography (EEG) which is a non-invasive data acquisition technique. It is aimed to achieve a higher level of performance by capturing the most relevant signals with the use of eight electrodes. The signal enhancement and feature extraction will be done using signal processing techniques like signal filtering, independent component analysis (ICA), principal component analysis (PCA), wavelet transform, and fast Fourier transform (FFT). Then, signals will be classified into five categories using the artificial neural network technique as up, down, left, right, and none.
 
-</p>
+
 #### Team
 
 - E/16/012,  Isurika Adikari, [email](e16012@eng.pdn.ac.lk)
