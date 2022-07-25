@@ -12,3 +12,14 @@ ___
 
 - Dr. Isuru Nawinne, [email](isurunawinne@eng.pdn.ac.lk)
 - Prof. Roshan G. Ragel, [email](roshanr@eng.pdn.ac.lk)
+- Dr. Mahanama Wickramasinghe [email](mahanamaw@eng.pdn.ac.lk)
+- Mr. Theekshana Dissanayake [email](theekshanadis@eng.pdn.ac.lk)
+
+### Links
+
+- [Project Page](https://cepdnaclk.github.io/e16-4yp-Enhancing-Video-Game-Experience-With-Brain-Computer-Interface/)
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
+- [Faculty of Engineering](http://eng.pdn.ac.lk/)
+- [University of Peradeniya](https://www.pdn.ac.lk/)
+
+
