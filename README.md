@@ -2,7 +2,6 @@ ___
 # e16-4yp-Enhancing Video Game Experience With Brain Computer Interface
 ___
 
-<p style='text-align: justify;'>
 One of the biggest trends in the world now is playing video games. Although visual effects in video games have advanced greatly, game play approaches have remained largely constant throughout time. For playing games, gamers continue to use a keyboard, mouse, and joysticks. Hence, Brain Computer Interface (BCI) is a fantastic approach for improving the gaming experience. Applications for BCI are widely employed in the healthcare sector as well. Wheelchair control, as an illustration, is challenging for those with physical limitations. They are able to mentally operate the wheelchair with BCI technology.
 
 Non-invasive EEG-based Brain Computer Interface (BCI) devices have been a fascinating topic of study in numerous disciplines. Brain-Computer Interface (BCI) is a collaboration between a brain and a device that enables signals from the brain to direct some external activity. In BCI systems, there are two main thought patterns: motor imagery and non-motor imagery. Motor imagery is a cognitive process in which a subject imagines that he/she performs a movement without actually performing the movement and without even tensing the muscles. It is a dynamic state during which the representation of a specific motor action is internally activated without any motor output. Arithmetic computation, visual counting, auditory imagination, and inner speaking are the non-motor imagery tasks. 
@@ -14,16 +13,16 @@ In this project, a simple navigation video game application will be developed. T
 
 #### Team
 
-- E/16/012,  Isurika Adikari, [email](e16012@eng.pdn.ac.lk)
-- E/16/081, J.M.Praveen Dhananjaya, [email](e16081@eng.pdn.ac.lk)
-- E/16/200, Sumudu Liyanage, [email](e16200@eng.pdn.ac.lk)
+- E/16/012,  Isurika Adikari, [email](mailto:e16012@eng.pdn.ac.lk)
+- E/16/081, J.M.Praveen Dhananjaya, [email](mailto:e16081@eng.pdn.ac.lk)
+- E/16/200, Sumudu Liyanage, [email](mailto:e16200@eng.pdn.ac.lk)
 
 #### Supervisors
 
-- Dr. Isuru Nawinne, ![email](isurunawinne@eng.pdn.ac.lk)
-- Prof. Roshan G. Ragel, ![email](roshanr@eng.pdn.ac.lk)
-- Dr. Mahanama Wickramasinghe ![email](mahanamaw@eng.pdn.ac.lk)
-- Mr. Theekshana Dissanayake ![email](theekshanadis@eng.pdn.ac.lk)
+- Dr. Isuru Nawinne, [email](mailto:isurunawinne@eng.pdn.ac.lk)
+- Prof. Roshan G. Ragel, [email](mailto:roshanr@eng.pdn.ac.lk)
+- Dr. Mahanama Wickramasinghe [email](mailto:mahanamaw@eng.pdn.ac.lk)
+- Mr. Theekshana Dissanayake [email](mailto:theekshanadis@eng.pdn.ac.lk)
 
 ### Links
 
