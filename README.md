@@ -20,10 +20,10 @@ In this project, a simple navigation video game application will be developed. T
 
 #### Supervisors
 
-- Dr. Isuru Nawinne, [email](isurunawinne@eng.pdn.ac.lk)
-- Prof. Roshan G. Ragel, [email](roshanr@eng.pdn.ac.lk)
-- Dr. Mahanama Wickramasinghe [email](mahanamaw@eng.pdn.ac.lk)
-- Mr. Theekshana Dissanayake [email](theekshanadis@eng.pdn.ac.lk)
+- Dr. Isuru Nawinne, ![email](isurunawinne@eng.pdn.ac.lk)
+- Prof. Roshan G. Ragel, ![email](roshanr@eng.pdn.ac.lk)
+- Dr. Mahanama Wickramasinghe ![email](mahanamaw@eng.pdn.ac.lk)
+- Mr. Theekshana Dissanayake ![email](theekshanadis@eng.pdn.ac.lk)
 
 ### Links
 
