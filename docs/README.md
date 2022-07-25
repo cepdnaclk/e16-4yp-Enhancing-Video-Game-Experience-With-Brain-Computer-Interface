@@ -21,6 +21,8 @@ title:
 
 - Dr. Isuru Nawinne, [email](isurunawinne@eng.pdn.ac.lk)
 - Prof. Roshan G. Ragel, [email](roshanr@eng.pdn.ac.lk)
+- Dr. Mahanama Wickramasinghe, [email](mahanamaw@eng.pdn.ac.lk)
+- Mr. Theekshana Dissanayake, [email](theekshanadis@eng.pdn.ac.lk)
 
 #### Table of content
 
@@ -76,8 +78,8 @@ The signal enhancement and feature extraction will be done using signal processi
 
 [//]: # ( NOTE: EDIT THIS LINKS WITH YOUR REPO DETAILS )
 
-- [Project Repository](https://github.com/cepdnaclk/repository-name)
-- [Project Page](https://cepdnaclk.github.io/repository-name)
+- [Project Repository](https://github.com/cepdnaclk/e16-4yp-Enhancing-Video-Game-Experience-With-Brain-Computer-Interface)
+- [Project Page](https://cepdnaclk.github.io/e16-4yp-Enhancing-Video-Game-Experience-With-Brain-Computer-Interface/)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
