@@ -45,22 +45,12 @@ Developing a video game interface that uses the brain-computer interface (BCI) b
 
 ## Methodology
 
-Brain-Computer Interface (BCI) is a collaboration between a brain and a device that enables signals from the
-brain to direct some external activity (Khong et al., 2014). In this project, four control actions (left, right, up,
-and down) will be performed in a video game using BCI. In this approach, inner speech commands will be used
-as the method to control the video game application. The inner speech (Nieto et al., 2021), also referred to as
-verbal thinking, is a form of self-directed speech produced in mind
+Brain-Computer Interface (BCI) is a collaboration between a brain and a device that enables signals from the brain to direct some external activity. In this project, four control actions (left, right, up, and down) will be performed in a video game using BCI. In this approach, inner speech commands will be used as the method to control the video game application. The inner speech, also referred to as verbal thinking, is a form of self-directed speech produced in mind.
 
-One of the main steps in this project is to acquire brain signals related to inner speech. The data acquisition
-technique to be used is electroencephalography (EEG) which is a non-invasive data acquisition technique. It is
-aimed to achieve a higher level of performance by capturing the most relevant signals with the use of eight
+One of the main steps in this project is to acquire brain signals related to inner speech. The data acquisition technique to be used is electroencephalography (EEG) which is a non-invasive data acquisition technique. It is aimed to achieve a higher level of performance by capturing the most relevant signals with the use of eight
 electrodes.
 
-The signal enhancement and feature extraction will be done using signal processing techniques like signal
-filtering, independent component analysis (ICA), principal component analysis (PCA), wavelet transform, and
-fast Fourier transform (FFT). Then, signals will be classified into five categories using the artificial neural
-network technique as up, down, left, right, and none (Chai et al., 2012; Simistira Liwicki et al., 2022). These
-classified commands are fed into the real-time application (Figure 01).
+The signal enhancement and feature extraction will be done using signal processing techniques like signal filtering, independent component analysis (ICA), principal component analysis (PCA), wavelet transform, and fast Fourier transform (FFT). Then, signals will be classified into five categories using the artificial neural network technique as up, down, left, right, and none. These classified commands are fed into the real-time application.
 
 ![Experiment steps](./images/steps.png)
 
