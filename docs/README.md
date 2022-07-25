@@ -13,16 +13,16 @@ title:
 
 #### Team
 
-- E/16/012,  Isurika Adikari, [email](e16012@eng.pdn.ac.lk)
-- E/16/081, J.M.Praveen Dhananjaya, [email](e16081@eng.pdn.ac.lk)
-- E/16/200, Sumudu Liyanage, [email](e16200@eng.pdn.ac.lk)
+- E/16/012,  Isurika Adikari, [email](mailto:e16012@eng.pdn.ac.lk)
+- E/16/081, J.M.Praveen Dhananjaya, [email](mailto:e16081@eng.pdn.ac.lk)
+- E/16/200, Sumudu Liyanage, [email](mailto:e16200@eng.pdn.ac.lk)
 
 #### Supervisors
 
-- Dr. Isuru Nawinne, [email](isurunawinne@eng.pdn.ac.lk)
-- Prof. Roshan G. Ragel, [email](roshanr@eng.pdn.ac.lk)
-- Dr. Mahanama Wickramasinghe, [email](mahanamaw@eng.pdn.ac.lk)
-- Mr. Theekshana Dissanayake, [email](theekshanadis@eng.pdn.ac.lk)
+- Dr. Isuru Nawinne, [email](mailto:isurunawinne@eng.pdn.ac.lk)
+- Prof. Roshan G. Ragel, [email](mailto:roshanr@eng.pdn.ac.lk)
+- Dr. Mahanama Wickramasinghe, [email](mailto:mahanamaw@eng.pdn.ac.lk)
+- Mr. Theekshana Dissanayake, [email](mailto:theekshanadis@eng.pdn.ac.lk)
 
 #### Table of content
 
