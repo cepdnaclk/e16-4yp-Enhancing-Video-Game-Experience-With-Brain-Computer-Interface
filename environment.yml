@@ -1,0 +1,16 @@
+# conda env update --file environment.yml  --prune
+
+name: e16-4yp-Enhancing-Video-Game-Experience-With-Brain-Computer-Interface
+channels:
+  - defaults
+dependencies:
+  - python>=3.8
+  - pip
+  - matplotlib
+  - numpy
+  - PyQt>=5
+  - pyserial
+  - bitstring
+  - xmltodict
+  - requests
+  - pyOpenBCI
