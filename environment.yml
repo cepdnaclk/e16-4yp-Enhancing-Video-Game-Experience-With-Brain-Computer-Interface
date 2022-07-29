@@ -1,0 +1,19 @@
+# conda env update --file environment.yml  --prune
+# pyOpen manual install
+
+name: e16-4yp-Enhancing-Video-Game-Experience-With-Brain-Computer-Interface
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.8
+  - pip
+  - matplotlib
+  - numpy
+  - PyQt>=5
+  - pyserial
+  - bitstring
+  - xmltodict
+  - requests
+  - scikit-learn
+  - mne
