@@ -15,7 +15,7 @@ def stft(x, fs):
 
 if __name__ == "__main__":
 
-    f = open("../Trial Workflow/data/22_07_2022 11_07_04.csv", "r").read()  # 12_07_2022 02_00_03 #
+    f = open("../data acquisition gui/data/22_07_2022 11_07_04.csv", "r").read()  # 12_07_2022 02_00_03 #
     print(len(f))
     x = f.split('\n')
     #print(x[1])
