@@ -17,3 +17,5 @@ dependencies:
   - requests
   - scikit-learn
   - mne
+  - ipykernel
+  - pyEDFlib
