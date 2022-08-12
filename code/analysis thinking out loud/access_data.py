@@ -10,9 +10,10 @@ matplotlib.use('Qt5Agg')
 # data/ds003626/sub-01/ses-01/eeg/sub-01_ses-01_task-innerspeech_eeg.bdf
 
 class Access_file(Handler):
-    def __init__(self, file_name='sub-03_ses-02_task-innerspeech_eeg.bdf'):
+    def __init__(self, file_name='sub-03_ses-02'):
         super().__init__()
-        self.raw = mne.io.read_raw_bdf(file_name, preload=True)  # file load
+        self.file_name = file_name
+        self.raw = mne.io.read_raw_bdf(self.file_name + '_task-innerspeech_eeg.bdf', preload=True)  # file load
         self.raw.info['bads']  # todo bad channel detector
         self.raw.drop_channels(['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8'])  # drop extra
 
@@ -25,11 +26,12 @@ class Access_file(Handler):
         if self.nextHandler is None:  # no next element
             return self.raw
         else:  # next element
-            super(Access_file, self).handle(self.raw)
+            request = [self.raw, self.file_name]
+            super(Access_file, self).handle(request)
 
 
 if __name__ == "__main__":
-    file = Access_file()
+    file = Access_file(file_name='sub-03_ses-02')
     raw = file.handle()
     raw.plot()
     #
