@@ -19,3 +19,4 @@ dependencies:
   - mne
   - ipykernel
   - pyEDFlib
+  - PyWavelets
