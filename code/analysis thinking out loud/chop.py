@@ -22,7 +22,7 @@ class Chop(Handler):
 
         self.out = ''
 
-    def handle(self, request: [mne.io.edf.edf.RawEDF, mne.epochs.EpochsFIF]):
+    def handle(self, request: [mne.io.edf.edf.RawEDF, mne.epochs.EpochsFIF, str]):
         self.epochs = request[1]
         # “Arriba”    = “up”
         # “Abajo”     = “down”
@@ -44,7 +44,7 @@ class Chop(Handler):
         self.right = self.action_interval['Derecha'].get_data()
         self.left = self.action_interval['Izquierda'].get_data()
 
-        self.out = [self.up, self.down, self.right, self.left, self.relax_interval]
+        self.out = [self.up, self.down, self.right, self.left, self.relax_interval, request[2]]
 
         if self.nextHandler is None:
             return self.out

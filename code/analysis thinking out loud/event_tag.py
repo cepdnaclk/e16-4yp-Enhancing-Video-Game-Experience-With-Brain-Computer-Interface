@@ -13,14 +13,14 @@ class Event_tag(Handler):
         self.file_name = ''
         self.epochs = ''
 
-    def handle(self, request):
+    def handle(self, request: [mne.io.edf.edf.RawEDF, str]):
         # load the event fill
         # file = 'sub-03_ses-02'
         name = request[1] + '_eeg-epo.fif'
         self.epochs = mne.read_epochs(name, verbose='WARNING')
 
         # loop through epochs
-        out = [request, self.epochs]
+        out = [request, self.epochs, request[1]]
 
         if self.nextHandler is None:  # no next element
             return out
