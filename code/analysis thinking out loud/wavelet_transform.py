@@ -1,7 +1,5 @@
 import sys
-
 import matplotlib.pyplot as plt
-
 from CoR import Handler
 from scipy import signal
 import mne
@@ -12,7 +10,7 @@ from transformer import Transformer
 import numpy as np
 
 
-def convertor(x: np.ndarray, fs: float, name: str):
+def convertor(x: np.ndarray, fs: float, path: str):
     widths = np.arange(1,20)
     cwtmatr = signal.cwt(x, signal.ricker, widths )
 
@@ -23,11 +21,10 @@ def convertor(x: np.ndarray, fs: float, name: str):
     plt.ylabel('Scale')
     plt.xlabel('Time [sec]')
     
-    plt.show()
-
-    # todo remove this ans add file save
-    sys.exit()
-
+    print("Saving figure", path)
+    plt.savefig(path, format="png")
+    
+    #sys.exit()
 
 class WT(Handler):
     def __init__(self):
