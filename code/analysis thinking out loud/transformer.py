@@ -9,7 +9,7 @@ import numpy
 ROOT_DIR = "."
 
 # change according to the applying transformer
-PLOT_TYPE = "WT"
+PLOT_TYPE = "STFT"
 
 class Transformer(Handler):
     def __init__(self):
@@ -60,6 +60,9 @@ class Transformer(Handler):
 
         # right
         self.pushing(self.right, "Right")
+
+        # relax period
+        self.pushing(self.relax_interval, "Relax")
 
 
 if __name__ == "__main__":
