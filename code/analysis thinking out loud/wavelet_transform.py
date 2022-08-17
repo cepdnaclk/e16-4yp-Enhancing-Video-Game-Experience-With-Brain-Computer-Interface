@@ -13,16 +13,17 @@ import numpy as np
 
 
 def convertor(x: np.ndarray, fs: float, name: str):
-    widths = np.arange(1,20)
-    cwtmatr = signal.cwt(x, signal.ricker, widths )
+    norm = np.linalg.norm(x)
+    x = x / norm
+    widths = np.arange(1, 63)
+    cwt_wt = signal.cwt(x, signal.ricker, widths)
 
-    plt.imshow(cwtmatr, cmap='PRGn', aspect='auto',
-           vmax=abs(cwtmatr).max(), vmin=-abs(cwtmatr).max())
+    plt.imshow(cwt_wt, aspect='auto')
 
     plt.title('CWT')
     plt.ylabel('Scale')
     plt.xlabel('Time [sec]')
-    
+
     plt.show()
 
     # todo remove this ans add file save
@@ -36,7 +37,7 @@ class WT(Handler):
     def handle(self, request: [str, np.ndarray]):
         # frequency
         convertor(request[1], 256, request[0])
-        
+
         if self.nextHandler is None:
             return
 
