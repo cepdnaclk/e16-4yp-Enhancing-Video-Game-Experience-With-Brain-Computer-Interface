@@ -10,12 +10,13 @@ from transformer import Transformer
 import numpy as np
 
 
-def convertor(x: np.ndarray, fs: float, path: str):
-    widths = np.arange(1,20)
+def convertor(x: np.ndarray, fs: float, path: str):\
+    norm = np.linalg.norm(x)
+    x = x / norm
+    widths = np.arange(1,63)
     cwtmatr = signal.cwt(x, signal.ricker, widths )
 
-    plt.imshow(cwtmatr, cmap='PRGn', aspect='auto',
-           vmax=abs(cwtmatr).max(), vmin=-abs(cwtmatr).max())
+    plt.imshow(cwtmatr, aspect='auto')
 
     plt.title('CWT')
     plt.ylabel('Scale')
