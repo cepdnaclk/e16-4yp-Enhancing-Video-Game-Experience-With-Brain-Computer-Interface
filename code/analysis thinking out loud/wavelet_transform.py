@@ -10,7 +10,7 @@ from transformer import Transformer
 import numpy as np
 
 
-def convertor(x: np.ndarray, fs: float, path: str):\
+def convertor(x: np.ndarray, fs: float, path: str):
     norm = np.linalg.norm(x)
     x = x / norm
     widths = np.arange(1,63)
