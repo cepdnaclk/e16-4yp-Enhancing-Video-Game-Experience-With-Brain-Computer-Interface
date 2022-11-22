@@ -17,7 +17,7 @@ def stft(x, fs):
 
 if __name__ == "__main__":
 
-    f = open("../data acquisition gui/data/csv/22_07_2022 11_06_31.csv", "r").read()  # 12_07_2022 02_00_03 #
+    f = open("../data acquisition gui/data/csv/12_07_2022 01_39_14.csv", "r").read()  # 12_07_2022 02_00_03 #
     print(len(f))
     x = f.split('\n')
     # print(x[1])
@@ -35,4 +35,4 @@ if __name__ == "__main__":
     for y in data:
         temp = data
 
-    stft(data, 250)
+    stft(data, 50)

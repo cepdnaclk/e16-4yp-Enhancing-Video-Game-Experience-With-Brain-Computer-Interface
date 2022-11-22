@@ -10,16 +10,34 @@ from transformer import Transformer
 import numpy as np
 
 
-def convertor(x: np.ndarray, fs: float, path:str):
-    f, t, zxx = signal.stft(x, fs, nperseg=256)
-    plt.pcolormesh(t, f, np.abs(zxx), vmax=1000, shading='gouraud')
-    plt.title('STFT')
-    plt.ylabel('Frequency [Hz]')
-    plt.xlabel('Time [sec]')
+def encoder():
+    pass
+
+
+def convertor(x: np.ndarray, fs: float, path: str):
+    # create 2d matrix
+    Z = np.abs(signal.stft(x, fs, nperseg=50)[2]) # 50
+
+    # plt.imshow(Z,aspect='auto')
+    # plt.show()
+    # print(type(Z))
+    # save file
+    np.save(path,Z)
+
+    # y = np.load(path+'.npy')
+    # plt.imshow(y, aspect='auto')
+    # plt.show()
+    # print(type(y))
+    # print(y)
+    # print(value)
+    # plt.pcolormesh(t, f, np.abs(zxx), shading='gouraud')
+    # plt.title('STFT')
+    # plt.ylabel('Frequency [Hz]')
+    # plt.xlabel('Time [sec]')
+    # print(f, t, zxx)
     print("Saving figure", path)
-    plt.savefig(path, format="png")
-   
-    #sys.exit()
+    # plt.savefig(path, format="png")
+    # sys.exit()
 
 class STFT(Handler):
     def __init__(self):
@@ -34,7 +52,7 @@ class STFT(Handler):
 
 
 if __name__ == "__main__":
-    file = Access_file(file_name='sub-03_ses-02')
+    file = Access_file(file_name='sub_01_ses_02_sub_01_ses_02')
     tags = Event_tag()
     chop = Chop()
     transformer = Transformer()

@@ -13,7 +13,7 @@ class Access_file(Handler):
     def __init__(self, file_name='sub-03_ses-02'):
         super().__init__()
         self.file_name = file_name
-        self.raw = mne.io.read_raw_bdf(self.file_name + '_task-innerspeech_eeg.bdf', preload=True)  # file load
+        self.raw = mne.io.read_raw_bdf(self.file_name + '_task_innerspeech.bdf', preload=True)  # file load
         self.raw.info['bads']  # todo bad channel detector
         self.raw.drop_channels(['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8'])  # drop extra
 
@@ -31,7 +31,7 @@ class Access_file(Handler):
 
 
 if __name__ == "__main__":
-    file = Access_file(file_name='sub-03_ses-02')
+    file = Access_file(file_name='sub-01_ses-02_eeg_sub-01_ses-02')
     raw = file.handle()
     raw.plot()
     #

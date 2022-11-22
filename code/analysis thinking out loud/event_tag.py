@@ -6,6 +6,8 @@ from access_data import Access_file
 
 matplotlib.use('Qt5Agg')
 
+# sub_01_ses-02_sub-01_ses-02_eeg-epo.fif
+# sub_01_ses_02_sub_01_ses_02_eeg-epo.fif
 
 class Event_tag(Handler):
     def __init__(self):
@@ -16,7 +18,7 @@ class Event_tag(Handler):
     def handle(self, request: [mne.io.edf.edf.RawEDF, str]):
         # load the event fill
         # file = 'sub-03_ses-02'
-        name = request[1] + '_eeg-epo.fif'
+        name = request[1] + '_eeg_epo.fif'
         self.epochs = mne.read_epochs(name, verbose='WARNING')
 
         # loop through epochs

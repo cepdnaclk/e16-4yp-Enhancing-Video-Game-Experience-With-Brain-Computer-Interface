@@ -34,9 +34,9 @@ class Transformer(Handler):
                 name = PLOT_TYPE+'_'+self.file_name + '_epoch-' + str(epochs) + '_channel-' + str(channel)
 
                 # path to save the plots
-                path = os.path.join(images_path, name + "." + "png")
+                path = os.path.join(images_path, name )
                 out = [path, value[epochs][channel]]
-                super(Transformer, self).handle(out)              
+                super(Transformer, self).handle(out)
 
     def handle(self, request: [numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray,
                                numpy.ndarray, str]):
