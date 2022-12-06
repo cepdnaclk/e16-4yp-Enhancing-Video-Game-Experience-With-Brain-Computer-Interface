@@ -13,4 +13,7 @@ dependencies:
   - numpy
   - requests
   - scikit-learn
+  - tensorflow
   - tensorflow-gpu
+  - jupyter
+  
