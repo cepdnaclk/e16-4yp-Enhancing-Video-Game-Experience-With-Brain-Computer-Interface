@@ -37,6 +37,7 @@ class Chop(Handler):
         # todo relax interval is 1 sec
         self.relax_interval = self.epochs.copy()
         self.relax_interval = self.relax_interval.crop(tmin=3, tmax=4)
+        self.relax_interval = self.relax_interval.get_data()
 
         # direction
         self.up = self.action_interval['Arriba'].get_data()
@@ -62,4 +63,7 @@ if __name__ == "__main__":
     tags.nextHandler = chop
     file.handle()
 
-    print(chop.relax_interval.get_data().shape)
+    print(chop.relax_interval.shape)
+    print(chop.up.shape)
+
+    print(type(chop.relax_interval), type(chop.up))

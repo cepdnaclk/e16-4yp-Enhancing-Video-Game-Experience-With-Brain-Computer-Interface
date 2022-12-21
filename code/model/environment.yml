@@ -2,7 +2,7 @@
 # conda env update --file environment.yml  --prune
 # pyOpen manual install
 
-name: e16-4yp-Enhancing-Video-Game-Experience-With-Brain-Computer-Interface
+name: e16-4yp-model
 channels:
   - defaults
   - conda-forge
@@ -11,15 +11,9 @@ dependencies:
   - pip
   - matplotlib
   - numpy
-  - PyQt>=5
-  - pyserial
-  - bitstring
-  - xmltodict
   - requests
   - scikit-learn
-  - mne
-  - ipykernel
-  - pyEDFlib
-  - PyWavelets
+  - tensorflow
   - tensorflow-gpu
-  - pytorch
+  - jupyter
+  
