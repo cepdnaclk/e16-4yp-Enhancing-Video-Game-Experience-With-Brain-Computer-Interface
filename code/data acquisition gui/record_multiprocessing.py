@@ -53,15 +53,16 @@ class Save:
 
 class Recording(QRunnable):
 
-    def __init__(self, end_signal_rec, status_record_val):
+    def __init__(self, end_signal_rec, status_record_val, board_val):
         super(Recording, self).__init__()
         self.file = Save()
         self.end_signal = end_signal_rec
         self.status_record = status_record_val
+        self.board = board_val
 
-    def print_raw(self):
+    def print_raw(self, sample):
         
-        raw = str(self.status_record.value)+',' + str(0) + '\n'
+        raw = str(self.status_record)+',' + str(sample.channels_data) + '\n'
         self.file.write(raw)
         #print(raw)
 
@@ -70,20 +71,14 @@ class Recording(QRunnable):
         self.file.open()
 
         # print data
-        #board.start_stream(self.print_raw)
+        self.board.start_stream(self.print_raw)
         print("start stream")
 
     def stop_file_write(self):
         # terminated connection
-        #board.stop_stream()
+        self.board.stop_stream()
         print("stop stream")
         self.file.close()
-        
-
-
-
-# create connection
-#board = OpenBCICyton(port='COM6', daisy=False)
 
 # ---------------------------- GUI ------------------------------
 
@@ -381,11 +376,11 @@ def gui(event, status_record, current_dir):
     sys.exit(App.exec())
 
 
-def record(event, status_record, current_dir):
+def record(event, status_record, current_dir, board):
     print("process2")
     event.wait()
     st = time.time()
-    record_obj = Recording(event, status_record)
+    record_obj = Recording(event, status_record, board)
     record_obj.start_file_write()
     while event.is_set():
         # print("status rec", status_record.value)
@@ -398,6 +393,8 @@ def record(event, status_record, current_dir):
 
 if __name__ == '__main__':
 
+    # create connection
+    board = OpenBCICyton(port='COM6', daisy=False)
 
     # event shared by both processes
     end_signal = multiprocessing.Event()
@@ -408,5 +405,5 @@ if __name__ == '__main__':
     process1 = multiprocessing.Process(target=gui, args=[end_signal, status_recording, current_direction])
     process1.start()
 
-    process2 = multiprocessing.Process(target=record, args=[end_signal, status_recording, current_direction])
+    process2 = multiprocessing.Process(target=record, args=[end_signal, status_recording, current_direction, board])
     process2.start()
