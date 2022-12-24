@@ -17,12 +17,13 @@ from pyOpenBCI import OpenBCICyton
 from datetime import datetime
 import multiprocessing
 
-# trigger end of recording action
-def end_record(event):
+# end of recording action
+def end_record(event, event_bci):
     print("clear")
     event.clear()
+    event_bci.set()
 
-# un set end of recording action
+# trigger start of recording action
 # do recording
 def start_record(event):
     print("set")
@@ -53,10 +54,11 @@ class Save:
 
 class Recording(QRunnable):
 
-    def __init__(self, end_signal_rec, status_record_val, board_val):
+    def __init__(self, start_signal_rec,stop_bci_signal, status_record_val, board_val):
         super(Recording, self).__init__()
         self.file = Save()
-        self.end_signal = end_signal_rec
+        self.start_signal = start_signal_rec
+        self.stop_bci = stop_bci_signal
         self.status_record = status_record_val
         self.board = board_val
 
@@ -66,27 +68,32 @@ class Recording(QRunnable):
         self.file.write(raw)
         #print(raw)
 
+        if self.stop_bci.is_set():
+          # terminated connection
+          self.board.stop_stream()
+          print("stop stream")
+          self.file.close()
+              
+
     def start_file_write(self):
         # raw data save
         self.file.open()
 
         # print data
-        self.board.start_stream(self.print_raw)
         print("start stream")
-
-    def stop_file_write(self):
-        # terminated connection
-        self.board.stop_stream()
-        print("stop stream")
-        self.file.close()
+        self.board.start_stream(self.print_raw)
+        
+  
+        
 
 # ---------------------------- GUI ------------------------------
 
 class SecondWindow(QMainWindow):
 
-  def __init__(self, event_signal, status_record_val, curr_dir_val):
+  def __init__(self, event_signal, bci_signal, status_record_val, curr_dir_val):
     super().__init__()
-    self.end_signal_secw = event_signal
+    self.start_signal_secw = event_signal
+    self.bci_signal_secw = bci_signal
     self.status_record = status_record_val
     self.current_direction = curr_dir_val
 
@@ -298,8 +305,8 @@ class SecondWindow(QMainWindow):
 
   # start and stop button
   def button1_clicked(self):
-    end_record(self.end_signal_secw)
-    self.w = Window(self.end_signal_secw, self.status_record, self.current_direction)
+    end_record(self.start_signal_secw, self.bci_signal_secw)
+    self.w = Window(self.start_signal_secw, self.bci_signal_secw, self.status_record, self.current_direction)
     self.hide()
     self.w.show()
     
@@ -307,9 +314,10 @@ class SecondWindow(QMainWindow):
 
 class Window(QMainWindow):
 
-  def __init__(self, event_signal, status_record_val, curr_dir_val):
+  def __init__(self, event_signal, bci_signal, status_record_val, curr_dir_val):
     super().__init__()
-    self.end_signal_w = event_signal
+    self.start_signal_w = event_signal
+    self.bci_signal_w = bci_signal
     self.status_record = status_record_val
     self.current_direction = curr_dir_val
 
@@ -351,9 +359,9 @@ class Window(QMainWindow):
   # start and stop button
   def button1_clicked(self):
 
-    start_record(self.end_signal_w)
+    start_record(self.start_signal_w)
 
-    self.w1 = SecondWindow(self.end_signal_w, self.status_record, self.current_direction)
+    self.w1 = SecondWindow(self.start_signal_w, self.bci_signal_w, self.status_record, self.current_direction)
     self.w1.show()
     self.hide()
 
@@ -361,7 +369,7 @@ class Window(QMainWindow):
 
 
 
-def gui(event, status_record, current_dir):
+def gui(event, event_bci, status_record, current_dir):
 
     # time.sleep(3)
     # end_record(event)
@@ -371,25 +379,21 @@ def gui(event, status_record, current_dir):
     # create pyqt5 app
     App = QApplication(sys.argv)
     # create the instance of our Window
-    window = Window(event, status_record, current_dir)
+    window = Window(event,event_bci, status_record, current_dir)
     # start the app
     sys.exit(App.exec())
 
 
-def record(event, status_record, current_dir, board):
+def record(event_button, event_bci, status_record, board):
     print("process2")
-    event.wait()
-    st = time.time()
-    record_obj = Recording(event, status_record, board)
-    record_obj.start_file_write()
-    while event.is_set():
+    event_button.wait()
+    record_obj = Recording(event_button, event_bci, status_record, board)
+    
+    if event_button.is_set():
         # print("status rec", status_record.value)
         # print("curr_dir", current_dir.value)
-        record_obj.print_raw()
+        record_obj.start_file_write()
 
-    et = time.time()
-    record_obj.stop_file_write()
-    print("task over ", et - st)
 
 if __name__ == '__main__':
 
@@ -397,13 +401,14 @@ if __name__ == '__main__':
     board = OpenBCICyton(port='COM6', daisy=False)
 
     # event shared by both processes
-    end_signal = multiprocessing.Event()
+    start_signal = multiprocessing.Event()
+    stop_bci = multiprocessing.Event()
 
     status_recording = multiprocessing.Value('i', 0)
     current_direction = multiprocessing.Value('i', 3)
 
-    process1 = multiprocessing.Process(target=gui, args=[end_signal, status_recording, current_direction])
+    process1 = multiprocessing.Process(target=gui, args=[start_signal,stop_bci, status_recording, current_direction])
     process1.start()
 
-    process2 = multiprocessing.Process(target=record, args=[end_signal, status_recording, current_direction, board])
+    process2 = multiprocessing.Process(target=record, args=[start_signal, stop_bci, status_recording, board])
     process2.start()
