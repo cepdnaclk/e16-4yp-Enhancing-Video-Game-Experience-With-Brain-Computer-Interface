@@ -9,7 +9,7 @@ import sys
 import time
 import random
 import multiprocessing
-from pyOpenBCI import OpenBCICyton
+from pyOpenBCI_v1 import OpenBCICyton
 
 
 # cycle time
@@ -169,6 +169,14 @@ class Recording():
         # create connection
         port = 'COM3'
         self.board = OpenBCICyton(port=port, daisy=False)
+        self.board.write_command('x1040010X')
+        self.board.write_command('x2040010X')
+        self.board.write_command('x3040010X')
+        self.board.write_command('x4040010X')
+        self.board.write_command('x5040010X')
+        self.board.write_command('x6040010X')
+        self.board.write_command('x7040010X')
+        self.board.write_command('x8040010X')
         self.FIFO = FIFO  
         self.start_signal = start_signal
         self.terminate_signal = terminate_signal
