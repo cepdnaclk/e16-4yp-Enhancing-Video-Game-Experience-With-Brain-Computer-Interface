@@ -313,7 +313,8 @@ class Sync:
                 self.terminate_signal.set()
                 break
             else:
-                time.sleep(1)
+                # time.sleep(1)
+                pass
 
 if __name__ == "__main__":
     sync = Sync()
