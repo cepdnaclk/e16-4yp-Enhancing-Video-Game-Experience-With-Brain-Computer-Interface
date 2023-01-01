@@ -20,6 +20,10 @@ white_dot_2 = 1000
 blue_dot = 3500
 rest_time = 4500
 
+num_list = [3,4,5,6]
+random.shuffle(num_list)
+
+num_list_p = 0
 
 class Window(QMainWindow):
 
@@ -127,7 +131,17 @@ class Window(QMainWindow):
         self.show_image(0,0)
 
         # random direction time = 0.5s
-        x = random.randint(3,6)
+        # x = random.randint(3,6)
+
+        # generate int randomly until end of num_list sequence
+        global num_list_p
+        if num_list_p > (len(num_list) - 1):
+            random.shuffle(num_list)
+            num_list_p = 0
+
+        x = num_list[num_list_p]
+        num_list_p = num_list_p + 1
+
         self.dirction_timer = QtCore.QTimer()
         self.dirction_timer.singleShot(direction, lambda: self.show_image(1,x))
 
@@ -168,7 +182,7 @@ class Recording():
     def __init__(self, FIFO: multiprocessing.Queue, start_signal : multiprocessing.Event, terminate_signal:  multiprocessing.Event ):
         # create connection
         port = 'COM3'
-        self.board = OpenBCICyton(port=port, daisy=False)
+        self.board = OpenBCICyton()
         self.board.write_command('x1040010X')
         self.board.write_command('x2040010X')
         self.board.write_command('x3040010X')
