@@ -1,6 +1,6 @@
-from pyOpenBCI import OpenBCICyton
 import random
 import time
+
 from paho.mqtt import client as mqtt_client
 
 broker = 'broker.emqx.io'
@@ -10,7 +10,7 @@ topic = "python/mqtt"
 client_id = f'python-mqtt-{random.randint(0, 1000)}'
 username = 'emqx'
 password = 'public'
-count = 0
+
 
 def connect_mqtt():
     def on_connect(client, userdata, flags, rc):
@@ -26,40 +26,28 @@ def connect_mqtt():
     return client
 
 
-
-def print_raw(sample):
-  
-    print(sample.channels_data)
-    
-    data = sample.channels_data
-    
-    msg  = ','.join(map(str,data))
-    
-    
-    
-    global count
-    count = count + 1
-    
-    msg = "Number:"+str(count)+": " + msg
-    
-    
-    
-    result = client.publish(topic, msg)
+def publish(client):
+    msg_count = 0
+    while True:
+        time.sleep(1)
+        msg = f"messages: {msg_count}"
+        print(type(msg))
+        result = client.publish(topic, msg)
         # result: [0, 1]
-    status = result[0]
-    if status == 0:
-      print(f"Number `{count}`Send `{msg}` to topic `{topic}`")
-    else:
-      print(f"Failed to send message to topic {topic}")
-       
-    
-   
-if __name__ == '__main__':
-  
-  client = connect_mqtt()
-  client.loop_start()
-  
-  board = OpenBCICyton(port='COM6', daisy=False)
+        status = result[0]
+        if status == 0:
+            print(f"Send `{msg}` to topic `{topic}`")
+        else:
+            print(f"Failed to send message to topic {topic}")
+        msg_count += 1
+        
 
-  board.start_stream(print_raw)
-  
+
+def run():
+    client = connect_mqtt()
+    client.loop_start()
+    publish(client)
+
+
+if __name__ == '__main__':
+    run()
