@@ -6,7 +6,7 @@ from paho.mqtt import client as mqtt_client
 
 broker = 'broker.emqx.io'
 port = 1883
-topic = "World"
+topic = "bci/game"
 # generate client ID with pub prefix randomly
 client_id = f'python-mqtt-{random.randint(0, 1000)}'
 username = 'emqx'
@@ -30,7 +30,7 @@ def connect_mqtt():
 def publish(client):
     msg_count = 0
     while True:
-        time.sleep(1)
+        time.sleep(2)
         msg = f"messages: {random.choice(moves)}"
         result = client.publish(topic, msg)
         # result: [0, 1]
