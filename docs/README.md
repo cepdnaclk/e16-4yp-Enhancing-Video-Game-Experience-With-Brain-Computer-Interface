@@ -110,13 +110,13 @@ The classification model is at the core of this research, aimed at distinguishin
 
 ## References
 
-[1] van den Berg, B., van Donkelaar, S., & Alimardani, M. (2021, September). Inner speech classification using eeg signals: A deep learning approach. In 2021 IEEE 2nd International Conference on Human-Machine Systems (ICHMS) (pp. 1-4). IEEE.
+[1] B. van den Berg, S. van Donkelaar, and M. Alimardani, “Inner speech classification using eeg signals: A deep learning approach,” in 2021 IEEE 2nd International Conference on Human-Machine Systems (ICHMS). IEEE, 2021, pp. 1–4.
 
-[2] Simistira Liwicki, F., Gupta, V., Saini, R., De, K., & Liwicki, M. (2022). Rethinking the Methods and Algorithms for Inner Speech Decoding and Making Them Reproducible. NeuroSci, 3(2), 226-244.
+[2] F. Simistira Liwicki, V. Gupta, R. Saini, K. De, and M. Liwicki, “Rethinking the methods and algorithms for inner speech decoding and making them reproducible,” NeuroSci, vol. 3, no. 2, pp. 226–244, 2022.
 
-[3] Sereshkeh, A. R., Trott, R., Bricout, A., & Chau, T. (2017). EEG classification of covert speech using regularized neural networks. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 25(12), 2292-2300.
+[3] A. R. Sereshkeh, R. Trott, A. Bricout, and T. Chau, “Eeg classification of covert speech using regularized neural networks,” IEEE/ACM Trans- actions on Audio, Speech, and Language Processing, vol. 25, no. 12, pp. 2292–2300, 2017.
 
-[4] Curtin, A., Ayaz, H., Liu, Y., Shewokis, P. A., & Onaral, B. (2012, August). A P300-based EEG-BCI for spatial navigation control. In 2012 Annual International Conference of the IEEE Engineering in Medicine and Biology Society (pp. 3841-3844). IEEE.
+[4] A. Curtin, H. Ayaz, Y. Liu, P. A. Shewokis, and B. Onaral, “A p300-based eeg-bci for spatial navigation control,” in 2012 Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE, 2012, pp. 3841–3844
 
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
