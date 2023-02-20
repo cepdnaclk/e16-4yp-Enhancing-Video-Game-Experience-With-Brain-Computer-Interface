@@ -34,6 +34,8 @@ Electroencephalogram (EEG) based Brain-Computer Interfaces (BCIs) were primarily
 
 ## Methodology
 
+
+
 Brain-Computer Interface (BCI) is a collaboration between a brain and a device that enables signals from the brain to direct some external activity. In this project, four control actions (left, right, up, and down) will be performed in a video game using BCI. In this approach, inner speech commands will be used as the method to control the video game application. The inner speech, also referred to as verbal thinking, is a form of self-directed speech produced in mind.
 
 One of the main steps in this project is to acquire brain signals related to inner speech. The data acquisition technique to be used is electroencephalography (EEG) which is a non-invasive data acquisition technique. It is aimed to achieve a higher level of performance by capturing the most relevant signals with the use of eight
@@ -49,14 +51,17 @@ The signal enhancement and feature extraction will be done using signal processi
 This study involved 9 healthy, right-handed subjects with a mean age of 25 years, of whom 4 were male and 5 were female. The subjects had no speech or hearing loss, no neurological, movement, or psychiatric disorders. All of the subjects gave their written, informed consent. These subjects had no prior BCI experience.
 
 ### Data acquisition
+
+![Data acquisition](./images/data%20acquisition.jpg)
 The experiment was designed to acquire data from the subjects. Inner speech paradigm was used throughout the experiment.The inner speech paradigm is a psychological concept that refers to the way people talk to themselves silently in their minds.
 The final outcome of the conducted research was to control the simple navigation game using four different mind commands. They were up, down, left, and right. In the experiment, the collected data was related to these mind commands of the subjects.
 A GUI was developed and used to guide the subject with what to think and when to think. Pyqt5 designer in python was used to design the experiment GUI. Initially, the subject was given a concentration interval of 0.5 seconds. In the next 0.5 seconds interval, the cue was shown up. The cue refers to the direction. After that, the action interval was shown for 2.5 seconds. Within the action interval, the subject was supposed to pronounce the shown direction in mind. Next, the subject was given a relax interval of 1 second and rest interval of 1.5 seconds. 
 
-![Data acquisition](./images/data%20acquisition.jpg)
+
 
 ### Data Preprocessing and Feature Extraction
 
+![Data Preprocessing](./images/image9.png)
 #### EEG Data
 
 The continuous raw data needed to be restructured in order to do further analysis. The implementation for the real-time transformation of data was done in Python.
