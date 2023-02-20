@@ -52,9 +52,10 @@ electrodes.
 
 The signal enhancement and feature extraction will be done using signal processing techniques like signal filtering, independent component analysis (ICA), continuous wavelet transform(CWT) , and short-time Fourier transform (STFT). Then, signals will be classified into five categories using the artificial neural network technique as up, down, left, right, and none. These classified commands are fed into the real-time application.
 
-![Experiment steps](./images/steps.png)
+![Data Preprocessing](./images/image9.png)
 
 ## Experiment Setup and Implementation
+
 
 ### Subjects
 This study involved 9 healthy, right-handed subjects with a mean age of 25 years, of whom 4 were male and 5 were female. The subjects had no speech or hearing loss, no neurological, movement, or psychiatric disorders. All of the subjects gave their written, informed consent. These subjects had no prior BCI experience.
@@ -70,7 +71,6 @@ A GUI was developed and used to guide the subject with what to think and when to
 
 ### Data Preprocessing and Feature Extraction
 
-![Data Preprocessing](./images/image9.png)
 #### EEG Data
 
 The continuous raw data needed to be restructured in order to do further analysis. The implementation for the real-time transformation of data was done in Python.
