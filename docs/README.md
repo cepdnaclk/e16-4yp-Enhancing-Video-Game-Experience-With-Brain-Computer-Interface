@@ -36,6 +36,9 @@ A study has presented a promising approach for decoding four words, up, down, le
 
 Several studies investigating inner speech decoding have used prompts consisting of words and vowels. Vowel sounds are often preferred as they are considered to be emotionally neutral and acoustically stable [2]. Researchers have also investigated the feasibility of using EEG signals to discriminate between simple and frequently used words such as "Yes" and "No" in response to binary questions [3]. This approach may be particularly useful for individuals who lack communication abilities. The findings suggest that EEG signals can effectively capture the distinctive properties associated with these words, enabling accurate discrimination between them.
 
+A study has explored the current state of inner speech decoding and discusses the limitations of existing methods and algorithms [2]. They propose a new approach based on deep neural networks to improve the accuracy and reproducibility of inner speech decoding, which leverages recent advances in machine learning and signal processing. The study highlights the importance of reproducibility in the field of inner speech decoding and proposes a standardized evaluation framework for comparing different methods and algorithms.
+
+BCI applications are not limited to clinical use, as they can also be used in gaming, entertainment, and 3D virtual environments. Researchers have explored the integration of spatial navigation control for virtual environments [4], which can also be utilized as a prototype control for physical systems like wheelchairs and robotic systems.
 
 ## Methodology
 
@@ -113,6 +116,7 @@ The classification model is at the core of this research, aimed at distinguishin
 
 [3] Sereshkeh, A. R., Trott, R., Bricout, A., & Chau, T. (2017). EEG classification of covert speech using regularized neural networks. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 25(12), 2292-2300.
 
+[4] Curtin, A., Ayaz, H., Liu, Y., Shewokis, P. A., & Onaral, B. (2012, August). A P300-based EEG-BCI for spatial navigation control. In 2012 Annual International Conference of the IEEE Engineering in Medicine and Biology Society (pp. 3841-3844). IEEE.
 
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
