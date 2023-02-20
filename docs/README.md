@@ -53,6 +53,42 @@ The experiment was designed to acquire data from the subjects. Inner speech para
 The final outcome of the conducted research was to control the simple navigation game using four different mind commands. They were up, down, left, and right. In the experiment, the collected data was related to these mind commands of the subjects.
 A GUI was developed and used to guide the subject with what to think and when to think. Pyqt5 designer in python was used to design the experiment GUI. Initially, the subject was given a concentration interval of 0.5 seconds. In the next 0.5 seconds interval, the cue was shown up. The cue refers to the direction. After that, the action interval was shown for 2.5 seconds. Within the action interval, the subject was supposed to pronounce the shown direction in mind. Next, the subject was given a relax interval of 1 second and rest interval of 1.5 seconds. 
 
+![Data acquisition](./images/data%20acquisition.jpg)
+
+### Data Preprocessing and Feature Extraction
+
+#### EEG Data
+
+The continuous raw data needed to be restructured in order to do further analysis. The implementation for the real-time transformation of data was done in Python.
+Functions were developed to load continuous raw data corresponding to a particular subject and session. This raw data was filtered and tagged corresponding to the GUI event. The structured data stored has information according to the corresponding subject, session, electrodes and events.
+
+#### ICA
+
+Independent Component Analysis (ICA) is a widely used technique for analyzing EEG data. ICA separates the multichannel EEG signal into independent components, each representing a different neural source. In this study FastICA was used, since it is well-suited for large datasets with many channels, and it can handle non-stationary and time-varying signals. Using FastICA the EEG signal was separated into 3 independent components, each representing the activity of a different neural source. These independent components were used as the inputs to the classification model.
+
+ICA can be used to identify and separate artifacts from the EEG data, such as eye movements, muscle activity, and environmental noise. It can also be used to study the functional connectivity between different brain regions by identifying independent components that represent the activity of specific brain networks.
+
+
+#### Signal data convert into 2d representation.
+
+  In traditional signal classification method use handcrafted signal features. Such as average, magnitude. These types of features are not adiqued build well performing machine learning model. Converting raw eeg data into 2d representation allows better capture the temporal and spectral characteristics of the signal. These representations can be direclty process by neural networks. For this experiment, we employed STFT and CWT. 
+
+
+##### STFT
+
+The short-time Fourier transform is one of the fundamental signal to image conversion method. The STFT involves dividing a signal into overlapping segments and then computing the Fourier transform of each segment. The resulting spectrogram provides a representation of the frequency content of the signal over time. One advantage of the STFT is that it is computationally efficient, and the resulting spectrogram can be easily visualized and interpreted. But STFT have poor time-frequency  representation. And it lead to underperform the neural network model. 
+
+##### CWT
+
+Compare STFT, CWT (Continuous Wavelet Transform)  can provide a more detailed representation of the temporal and spectral characteristics of the signal. But this techniques  require significant computational resources to implement. On other, CWT offer a rich full information to neural networks, enabling them to better identify patterns and structures in the signal data. The Continuous Wavelet Transform (CWT) involves two steps. First, the data is converted into a CWT matrix (Image 1), and then it is converted into an image (Image 2) using a plotting mechanism. However, in our implementation, we omit the second step to reduce the significant amount of computational power required. And directly pass this CWT matrix into neural network. 
+
+#### Classification models
+
+The classification model is at the core of this research, aimed at distinguishing between different mind commands and assigning them to their corresponding classes. In this study, we experimented with wide range of classification models. 
+
+- Channelless model
+- Channelwise model
+- Transfer learning (VGG19 and Restnet )
 
 
 ## Results and Analysis
