@@ -30,6 +30,11 @@ Electroencephalogram (EEG) based Brain-Computer Interfaces (BCIs) were primarily
 
 ## Related works
 
+There has been some research into using inner speech as a control signal for BCI systems. Several studies have investigated the potential of using inner speech to decode commands from EEG signals.
+
+A study has presented a promising approach for decoding four words, up, down, left and right using a 2D convolutional neural network (CNN) based on the EEGNet architecture [1]. The classification was performed on the raw EEG signals of eight subjects as they internally thought about the four different commands. The results of the study has shown that CNN is able to accurately classify the different types of inner speech, with an average classification accuracy of 29.7%. Usage of such deep learning approaches for inner speech classification can give rise to potential applications, such as development of brain-computer interfaces (BCIs) for communication and controlling assistive devices.
+
+Several studies investigating inner speech decoding have used prompts consisting of words and vowels. Vowel sounds are often preferred as they are considered to be emotionally neutral and acoustically stable [2]. Researchers have also investigated the feasibility of using EEG signals to discriminate between simple and frequently used words such as "Yes" and "No" in response to binary questions [3]. This approach may be particularly useful for individuals who lack communication abilities. The findings suggest that EEG signals can effectively capture the distinctive properties associated with these words, enabling accurate discrimination between them.
 
 
 ## Methodology
@@ -99,6 +104,15 @@ The classification model is at the core of this research, aimed at distinguishin
 ## Results and Analysis
 
 ## Conclusion
+
+## References
+
+[1] van den Berg, B., van Donkelaar, S., & Alimardani, M. (2021, September). Inner speech classification using eeg signals: A deep learning approach. In 2021 IEEE 2nd International Conference on Human-Machine Systems (ICHMS) (pp. 1-4). IEEE.
+
+[2] Simistira Liwicki, F., Gupta, V., Saini, R., De, K., & Liwicki, M. (2022). Rethinking the Methods and Algorithms for Inner Speech Decoding and Making Them Reproducible. NeuroSci, 3(2), 226-244.
+
+[3] Sereshkeh, A. R., Trott, R., Bricout, A., & Chau, T. (2017). EEG classification of covert speech using regularized neural networks. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 25(12), 2292-2300.
+
 
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
