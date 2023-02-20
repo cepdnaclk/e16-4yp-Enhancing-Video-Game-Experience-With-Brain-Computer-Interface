@@ -19,8 +19,9 @@ title:
 4. [Experiment Setup and Implementation](#experiment-setup-and-implementation)
 5. [Results and Analysis](#results-and-analysis)
 6. [Conclusion](#conclusion)
-7. [Publications](#publications)
-8. [Links](#links)
+7. [References](#references)
+8. [Publications](#publications)
+9. [Links](#links)
 
 
 
